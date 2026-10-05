@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohammed Abdul Rahman</title>
+<style>
+
+  * {
+    box-sizing: border-box;
+    font-size: 20px;
+  }
+
+  body {
+    margin: 10px;
+    font-family: Arial;
+    background: #03d0eb;
+    color: #17211b;
+    line-height: 1.6;
+  }
+
+  .container{
+    width: min(1000px, calc(100% - 40px));
+    background: #e3dfe1;
+    font-size: 20px;
+    margin: 0 auto;
+  }
+
+  
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+  }
+
+  nav .brand {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  nav .links {
+    display: flex;
+    gap: 20px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #17211b;
+  }
+
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid rgb(251, 10, 10);
+    background: #00b576;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    margin: 0 0 8px;
+    color: #ff4001;
+  }
+
+  .hero p {
+    color: #d407f4;
+    max-width: 500px;
+  }
+
+
+  section {
+    padding: 60px 0;
+  }
+
+  section h2 {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    background: #fbfbfb;
+    color: #13d619;
+  }
+
+  .skill-card {
+    background: #ec0606;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .project-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 24px;
+  }
+
+  .project-card h3 {
+    margin-top: 0;
+  }
+
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .contact-links a {
+    color: #ff4001;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    color: #c9f80cf7;
+    font-size: 14px;
+  }
+
+  @media (max-width: 600px) {
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+    nav .links {
+      gap: 12px;
+      font-size: 14px;
+    }
+  }
+  
+  :root {
+  --bg: #0d0a02;
+  --text: #30a7c2;
+  --card-bg: #ffffff;
+  --border: #ddd;
+  --accent: #00b576;
+}
+
+body.dark-mode {
+  --bg: #f6f5f3;
+  --text: #f50c0c;
+  --card-bg: #05d4f4;
+  --border: #0be642;
+  --accent: #ca5ab5;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.skill-card, .project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+}
+#themeToggle {
+  display: flex;
+  align-items: right;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+</style>
+</head>
+<body>
+  
+  
+  
+  <section class="hero">
+    <button id="themeToggle">🌙 Dark Mode</button>
+    <br>
+    <br><br>
+    <div class="avatar">AR</div>
+    <h1>Mohammed Abdul Rahman</h1>
+    <p>I’m a passionate student exploring technology and innovation,
+       and this college project represents my journey of learning, creativity,
+       and turning ideas into something meaningful.</p>
+  </section>
+
+  <section id="about" class="container">
+    <h2>About</h2>
+    <p>I’m Mohammed Abdul Rahman, a Computer Science and AI/ML student
+       passionate about technology and learning new skills. This project represents 
+       my journey of exploring web development, creativity,
+       and turning my ideas into a practical and meaningful portfolio.</p>
+  </section>
+
+  <section id="skills" class="container">
+    <h2>Skills</h2>
+    <div class="skills-grid" id="skillsGrid"></div>
+  </section>
+
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <a href="https://abdulrahman2425201-collab.github.io/project1/" target="_blank" rel="noreferrer">
+        <h3>Personal Dashboard</h3>
+      </a>
+        <p>This project is a Personal Dashboard that brings my important information, 
+          tasks, and activities together in one place. I built it using HTML, CSS, and JavaScript
+          , with the development supported by AI,
+           while I focused on customizing and understanding the project.</p>
+      </div>
+      <div class="project-card">
+        <h3>This portfolio</h3>
+        <p>This project is a personal portfolio website created to showcase my skills, projects, achievements,
+           and learning journey. I’m building it using HTML, CSS, and JavaScript,
+           with so much of hard work involved, with dedication and 
+           also by the guidance of my mentors(Mr. Shubham🫡).</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact</h2>
+    <div class="contact-links">
+      <a href="mailto:your.abdulrahman2425201@gmail.com">Email</a>
+      <a href="https://github.com/abdulrahman2425201-collab" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/mohammed-abdul-rahman-1BB548410" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="https://twitter.com/MrRahman2008" target="_blank" rel="noreferrer">Twitter</a>
+      <a href="https://www.instagram.com/mr_rahman.17/" target="_blank" rel="noreferrer">Instagram</a>
+      <a href="https://www.facebook.com/share/1F7RBWfbWh/" target="_blank" rel="noreferrer">Facebook</a>
+    </div>
+  </section>
+
+  <footer>
+    Mohammed Abdul Rahman
+  </footer>
+
+  <script>
+
+    let skills = [
+      { name: "HTML" },
+      { name: "CSS" },
+      { name: "JavaScript" },
+      { name: "Flexbox" },
+      { name: "Grid" },
+      { name: "Git & GitHub" }
+    ];
+
+    
+    let skillsGrid = document.getElementById("skillsGrid");
+
+    for (let i = 0; i < skills.length; i++) {
+      let card = document.createElement("div");
+      card.className = "skill-card";
+      card.textContent = skills[i].name; 
+      skillsGrid.appendChild(card);
+    }
+    const toggleBtn = document.getElementById("themeToggle");
+
+toggleBtn.addEventListener("click", function () {
+  document.body.classList.toggle("dark-mode");
+
+  if (document.body.classList.contains("dark-mode")) {
+    toggleBtn.textContent = "☀️ Light Mode";
+  } else {
+    toggleBtn.textContent = "🌙 Dark Mode";
+  }
+});
+  </script>
+
+</body>
+</html>
